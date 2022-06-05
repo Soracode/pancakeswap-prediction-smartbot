@@ -192,7 +192,7 @@ const getStats = async () => {
     return ({
         profit_USD: totalEarnings * BNBPrice,
         profit_BNB: totalEarnings,
-        percentage: -percentageChange((win + loss), loss) + '%',
+        percentage: -percentageChange((win + loss), loss) + '% ',
         win: win,
         loss: loss
     })
