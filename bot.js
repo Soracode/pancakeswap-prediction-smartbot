@@ -18,7 +18,7 @@ const betUp = async (amount, epoch) => {
             value: parseEther(amount.toFixed(18).toString()),
         })
         await tx.wait()
-        console.log(`🤞 Successful bet of ${amount} BNB to UP 🍀`)
+        console.log(`🤞 Successful bet of ${amount} BNB to UP 🍀 `)
     } catch (error) {
         console.log("Transaction Error", error)
         GLOBAL_CONFIG.WAITING_TIME = reduceWaitingTimeByTwoBlocks(GLOBAL_CONFIG.WAITING_TIME)
@@ -137,7 +137,7 @@ predictionContract.on("EndRound", async (epoch) => {
     let stats = await getStats()
     console.log('--------------------------------')
     console.log(`🍀 Fortune: ${stats.percentage}`)
-    console.log(`👍 ${stats.win}|${stats.loss} 👎 `)
+    console.log(`👍 ${stats.win}|${stats.loss} 👎`)
     console.log(`💰 Profit: ${stats.profit_USD.toFixed(3)} USD`)
     console.log('--------------------------------')
 })
