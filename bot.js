@@ -63,9 +63,9 @@ const getSignals = async () => {
 
     //Average signals
     if (minRecomendation && medRecomendation) {
-        let averageBuy = (parseInt(minRecomendation.BUY) + parseInt(medRecomendation.BUY)) / 2
-        let averageSell = (parseInt(minRecomendation.SELL) + parseInt(medRecomendation.SELL)) / 2
-        let averageNeutral = (parseInt(minRecomendation.NEUTRAL) + parseInt(medRecomendation.NEUTRAL)) / 2
+        let averageBuy = (parseInt(minRecomendation.BUY) + parseInt(medRecomendation.BUY)) / 2 
+        let averageSell = (parseInt(minRecomendation.SELL) + parseInt(medRecomendation.SELL)) / 2 
+        let averageNeutral = (parseInt(minRecomendation.NEUTRAL) + parseInt(medRecomendation.NEUTRAL)) / 2 
 
         return {
             buy: averageBuy,
