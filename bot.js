@@ -87,7 +87,7 @@ const strategy = async (minAcurracy, epoch) => {
     let BNBPrice
     let earnings = await getStats()
     if (earnings.profit_USD >= GLOBAL_CONFIG.DAILY_GOAL) {
-        console.log("🧞 Daily goal reached. Shuting down... ✨")
+        console.log("🧞 Daily goal reached. Shuting down... ✨ ")
         process.exit()
     }
     try {
@@ -137,7 +137,7 @@ predictionContract.on("EndRound", async (epoch) => {
     let stats = await getStats()
     console.log('--------------------------------')
     console.log(`🍀 Fortune: ${stats.percentage}`)
-    console.log(`👍 ${stats.win}|${stats.loss} 👎`)
+    console.log(`👍 ${stats.win}|${stats.loss} 👎 `)
     console.log(`💰 Profit: ${stats.profit_USD.toFixed(3)} USD`)
     console.log('--------------------------------')
 })
