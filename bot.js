@@ -18,7 +18,7 @@ const betUp = async (amount, epoch) => {
             value: parseEther(amount.toFixed(18).toString()),
         })
         await tx.wait()
-        console.log(`🤞 Successful bet of ${amount} BNB to UP 🍀`)
+        console.log(`🤞 Successful bet of ${amount} BNB to UP 🍀 `)
     } catch (error) {
         console.log("Transaction Error", error)
         GLOBAL_CONFIG.WAITING_TIME = reduceWaitingTimeByTwoBlocks(GLOBAL_CONFIG.WAITING_TIME)
@@ -87,7 +87,7 @@ const strategy = async (minAcurracy, epoch) => {
     let BNBPrice
     let earnings = await getStats()
     if (earnings.profit_USD >= GLOBAL_CONFIG.DAILY_GOAL) {
-        console.log("🧞 Daily goal reached. Shuting down... ✨ ")
+        console.log("🧞 Daily goal reached. Shuting down... ✨")
         process.exit()
     }
     try {
